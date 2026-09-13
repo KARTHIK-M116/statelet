@@ -213,31 +213,6 @@ drift before anyone notices. Both are thin wrappers over
 `Reconciler.reconcile()` — the spec is already declarative and the
 planner already accepts plain language, so neither needs engine changes.
 
-## Known gaps
-
-Stated plainly rather than left for a reviewer to find.
-
-- **Slack offboarding is impossible on some workspaces.**
-  `conversations.kick` returns `restricted_action` where workspace policy
-  forbids removing channel members — an admin setting, not a scope we can
-  request. The run aborts cleanly and rolls back the other three apps
-  rather than half-revoking access.
-- **Attribute tracking is partial.** Notion tracks page body, Linear
-  tracks assignee, Calendar tracks start date. Slack channel topics,
-  issue labels and event attendees are not fingerprinted, so drift in
-  those is invisible.
-- **No concurrency control.** Two simultaneous reconciles for the same
-  subject could both plan the same create. Idempotent creates limit the
-  damage; there is no lock.
-- **Compensation is not atomic.** A crash mid-rollback leaves a partial
-  rollback. The next run converges, but the window exists.
-- **Marker-based read scoping** means a human who edits the
-  `[statelet:<subject>]` marker out of a resource makes it invisible to
-  the reconciler.
-- **Notion content updates delete and recreate blocks**, so page history
-  and comments on those blocks are lost.
-- Private Slack channels are out of scope — the adapter requests only
-  public-channel scopes.
 
 ## License
 

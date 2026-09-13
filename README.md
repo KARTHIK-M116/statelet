@@ -124,9 +124,4 @@ python -m statelet.cli apply --spec specs/new-hire.yaml --live --dry-run
 `doctor` first, `--dry-run` second, live writes last. See
 [`docs/AUTH.md`](docs/AUTH.md).
 
-## Status
 
-Engine, chaos harness and in-memory backend are tested: 20 tests, 1,000
-fault-injection trials. The live HTTP adapters are written from each
-app's public API docs but have **not** been verified against real
-credentials — run `doctor` first. See Known gaps in the brief.

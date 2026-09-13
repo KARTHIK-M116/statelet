@@ -5,6 +5,7 @@
 Describe what should be true about a person. The agent makes it true
 across Slack, Notion, Linear and Google Calendar — and can prove it did.
 
+Demo Link: https://drive.google.com/file/d/1EdgDg7pEpK4FZjBS6RUmQJ9LtezXofJR/view?usp=sharing
 ```
 $ statelet apply --spec specs/new-hire.yaml
 Plan  +10

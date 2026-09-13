@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+.idea/
+.vscode/
+specs/demo.yaml
+.env
+setenv.ps1
+setenv*.ps1
+*.env
+.env*

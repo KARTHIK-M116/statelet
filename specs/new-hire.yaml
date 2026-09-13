@@ -1,0 +1,12 @@
+subject:
+  email: karthikmprofile@gmail.com
+  name: Karthik M
+  role: backend-engineer
+  manager: karthikmano116@gmail.com
+  start_date: '2026-09-21'
+desired:
+  slack_channels: [engineering, backend, deploys]
+  notion_pages: [onboarding-checklist, backend-runbook]
+  linear_issues: [setup-dev-environment, ship-first-pr]
+  calendar_events: [week1-1on1, week1-standup]
+prune: false
